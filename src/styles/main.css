@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  margin-top: 25px;
+}
+
+.navBarTitle{
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-left: 30px;
+  color: #fff;
+}
+
+.navBarButton {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.navBarButton > a{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  margin-right: 0px;
+  padding: 15px 15px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.navBarButton > a:hover{
+  background-color: #d1d177;
+}
+
+.jumbotron{
+  background: url(../public/images/heros/hero-image_2.jpg) center center;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 200px;
+  font-size: 40px;
+  color: white;
+  filter: brightness(50%);
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #0f0e0e;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 300px;
+  height: 350px;
+  margin: 30px 10px 50px 10px;
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+footer{
+  padding: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: white;
+  background: url(../public/images/heros/hero-image_4.jpg);
+  text-align: center;
+}
