@@ -3,23 +3,29 @@ import '../styles/main.css';
 
 console.log('Hello Coders! :)');
 
-fetch('../../src/public/data/DATA.json')
+fetch('../data/DATA.json')
   .then(response => response.json())
   .then(data => {
-    const cityElement = document.getElementById('city');
-    const pictureIdElement = document.getElementById('pictureId');
-    const ratingElement = document.getElementById('rating');
-    const nameElement = document.getElementById('name');
-    const descriptionElement = document.getElementById('description');
+    const restaurants = data.restaurants;
 
-    const restaurant = data.restaurants[0]; 
-    
-    cityElement.textContent = restaurant.city;
-    pictureIdElement.src = restaurant.pictureId;
-    ratingElement.textContent = restaurant.rating;
-    nameElement.textContent = restaurant.name;
-    descriptionElement.textContent = restaurant.description;
+    const container = document.getElementById('data-container');
+
+    restaurants.forEach(restaurant => {
+      const { city, name, rating, description, pictureId } = restaurant;
+
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        <h3>${city}</h3>
+        <img src="${pictureId}" alt="${name}">
+        <span><p>Rating ${rating}</p></span>
+        <h2>${name}</h2>
+        <p>${description}</p>
+      `;
+
+      container.appendChild(card);
+    });
   })
   .catch(error => {
-    console.log('Error:', error);
+    console.error('Error:', error);
   });

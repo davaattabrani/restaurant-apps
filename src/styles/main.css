@@ -8,10 +8,6 @@
   box-sizing: border-box;
 }
 
-img {
-  display: block;
-}
-
 .navBar{
   display: flex;
   justify-content: space-between;
@@ -87,13 +83,31 @@ img {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 30px;
+  padding: 10px;
   transition: 0.3s;
+  border: 1px solid #ccc;
   border-radius: 5px;
   width: 300px;
   height: 350px;
   margin: 30px 10px 50px 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
+
+.card img {
+  display: block;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card p {
+  margin-bottom: 5px;
+} 
 
 .card:hover{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
