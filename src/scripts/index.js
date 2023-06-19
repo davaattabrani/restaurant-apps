@@ -1,5 +1,6 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
+import '../styles/responsive.css';
 
 console.log('Hello Coders! :)');
 
@@ -28,4 +29,15 @@ fetch('../data/DATA.json')
   })
   .catch(error => {
     console.error('Error:', error);
+  });
+
+  window.addEventListener("scroll", function() {
+    var navBar = document.querySelector(".navBar");
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (scrollPosition > 0) {
+      navBar.classList.add("bgActive");
+    } else {
+      navBar.classList.remove("bgActive");
+    }
   });

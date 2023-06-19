@@ -13,12 +13,17 @@
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  transition: background-color 0.3s;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  margin-top: 25px;
+  padding: 10px;
+}
+
+.navBar.bgActive {
+  background-color: #4e4b4b;
 }
 
 .navBarTitle{
@@ -70,12 +75,13 @@
   font-weight: 900;
   color: #0f0e0e;
   text-align: center;
-  padding-top: 35px;
+  padding : 35px;
 }
 
 .container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -84,13 +90,13 @@
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
-  transition: 0.3s;
+  transition: 0.5s;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 300px;
+  width: calc(25% - 20px);
   height: 350px;
-  margin: 30px 10px 50px 10px;
-  margin-bottom: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
@@ -103,6 +109,10 @@
 .card h2 {
   font-size: 18px;
   margin-bottom: 5px;
+}
+
+.card h3{
+  
 }
 
 .card p {
